@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício - 11</title>
+</head>
+<body>
+  <h1>Loop de repetição - for</h1>
+
+  <script>
+    // Semelhante ao while, executa uma ação enquanto a condição for verdadeira. E é ideal para quando sabemos exatamente quantas vezes será executado
+
+    const n = parseFloat(prompt('Digite um número'))
+
+    if(!isNaN(n)) {
+
+      for(let i = 0; i <= 100; i++){
+        document.write(n + ' x ' + i + ' : ' + n * i + '<br>')
+    }
+    }else {
+      alert('Digite apenas número')
+    }
+
+  </script>
+</body>
+</html>

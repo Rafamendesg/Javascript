@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio - 09</title>
+</head>
+<body>
+  <h1>Desafio Swicth</h1>
+
+  <p>Crie uma variável e atribuia á ela qualquer valor. Utilizando a condicional switch, mostre no console ou alert o tipo da variável. Tenha uma carta na manga para mostrar uma mensagem padrão caso você desconheça o tipo da variável.</p>
+
+  <script>
+
+    const texto = null
+
+     switch(typeof texto){
+
+      case 'string':
+        alert('Sou uma string!')
+        break
+      case 'number':
+        alert('Sou um Number!')
+        break
+      case 'boolean':
+        alert('Sou um Boolean!')
+        break
+      default:
+        alert('Tipo não reconhecido, tente novamente!')
+     }
+    
+
+  </script>
+</body>
+</html>

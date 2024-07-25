@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <h1>Trabalhando com arrays</h1>
+
+  <script>
+    // Sempre que uma variável estive entre colchetes é um array
+
+    //let nomes = ['m', 'p', 'r']  // sintaxe literal 
+
+    // let nomes = new Array('m', 'p', 'r') // sintaxe função construtora
+
+
+    const users = ['Maria', 'Paulo', 'Daniel', 'Beatriz', 'Emily', 'Lucas']
+
+    const user = prompt('Digite o seu nome')
+
+    users[users.length] = user
+
+    for (let i = 0; i < users.length; i++) {
+      document.write('Nome: ' + users[i] + '<br>')
+      
+    }
+
+    document.write('A lista de usuarios possuir ' + users.length + ' elementos.') 
+    
+     const tels = ['(48) 99986-7751', '(71) 99785-8945', '(81) 97886-9906' , '(48) 97156-3246', '(48) 98867-2332', '(81) 97785-6841']
+
+     for(let i = 0; i < tels.length; i++){
+        document.write('Whatsapp: ' + tels[i] + '<br>')
+    }
+
+
+  </script>
+</body>
+</html>
