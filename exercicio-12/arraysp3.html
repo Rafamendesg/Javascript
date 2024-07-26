@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício - 12/3</title>
+</head>
+<body>
+  <h1>Arrays</h1>
+
+  <script>
+
+    const numbers = [29, 52, 'Mari', 71, null, 'Lg', undefined, '8']
+    let soma = 0
+
+    for(let i = 0; i < numbers.length; i++){
+        let n = numbers[i]
+
+        
+        if(typeof n === 'number'){
+        soma = soma + n
+    }
+
+    }
+
+    alert('A soma de todos os números do array é: ' + soma)
+  </script>
+  
+</body>
+</html>
