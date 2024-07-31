@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays com Objetos - 02</title>
+  <style>
+    table{
+      border-collapse: collapse;
+    }
+
+    table,th,td {
+      border: 1px solid #000;
+    }
+
+    th,td{
+      padding: 10px;
+    }
+
+    td + td{
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meus perfumes favoritos</h1>
+
+  <table id="tabelaPerfumes">
+      <thead>
+        <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Estoque</th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+  </table>
+
+
+  <script>
+    //Dado um array contendo 5 objetos, cada um representando um produto, mostrar em uma tabela(tag <table>) o nome, o preço e a quanidade em estoque de cada produto.
+
+    const perfumaria =[
+      {nome: 'Kaiak aereo', preco: 145.99, estoque: 8},
+      {nome: 'Coffe woman seduction', preco: 199.90, estoque: 10},
+      {nome: 'Meu primeiro humor', preco:143.90, estoque: 15},
+      {nome: 'Egeo dolce', preco:124.90, estoque: 10},
+      {nome: 'Egeo hit', preco:115.90, estoque: 25}
+
+    ]
+
+    const tabela = document.getElementById('tabelaPerfumes')
+
+    for(let i = 0; i < perfumaria.length; i++){
+      tabela.innerHTML += `<th> ${perfumaria[i].nome} <td> R$ ${perfumaria[i].preco.toFixed(2)} <td> ${perfumaria[i].estoque}`
+    }
+    
+  </script>
+</body>
+</html>
