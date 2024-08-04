@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução a função - p2</title>
+</head>
+<body>
+  <h1>Funções</h1>
+  <input type="number" id="numero">
+  <button onclick="mostrarTabuada()">Calcular</button>
+  <button onclick="limparTabuada()">Limpar</button>
+  <div id="tabuada"></div>
+
+  <script>
+    /*
+    Incluir no exercicío anterior um botão para limpar a tabuada previamente mostrada na tela e, sempre que mostrar a tabuada, limpar o contéudo previamente inserido na tela.
+    */
+
+    const input = document.getElementById('numero')
+    const output = document.getElementById('tabuada')
+    let tabuadaHtml = ''
+
+    function mostrarTabuada(){
+      const inputValue = parseFloat(input.value)
+
+      limparTabuada()
+
+      for(let i = 1; i <= 100; i++){
+        tabuadaHtml += `${i} X ${inputValue} = ${i * inputValue} <br>`
+      }
+      
+      output.innerHTML = tabuadaHtml
+    }
+    
+    function limparTabuada(){
+      tabuadaHtml = ''
+      output.innerHTML = ''
+
+    }
+
+  </script>
+</body>
+</html>

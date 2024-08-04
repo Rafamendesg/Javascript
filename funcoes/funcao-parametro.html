@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções com parâmetro</title>
+</head>
+<body>
+  <h1>Função - area de um círculo</h1>
+  
+  <label>Raio
+    <input type="number" id="raio">
+  </label>
+ 
+  <button onclick="mostrarAreaPrompt()">Calcular a área do prompt </button>
+  <button onclick="mostrarAreaInput()">Calcular a área do input</button>
+
+  <p id="paragrafo"></p>
+
+  <script>
+    
+    // function teste() {
+    //   const str = 'Minha string'
+    //   alert('Função teste ' + str)
+    // }
+    // teste()
+
+    // function teste2(str) { //Parâmetro
+    //   alert(`Função de teste 2: ${str}`)
+    // }
+    // teste2('Minha string!') //Argumento
+    // teste2('qualquer coisa')
+
+    // function teste3(p1,p2) { //A ordem em que estão os arguemento que determina quem é o primeiro e quem é o segundo parâmentro
+    //   alert(`Função de teste 3: ${p1} ${p2}`)
+    // }
+    // teste3('Argumento 1', 'Argumento 2')
+
+    // function teste4(p1,p2) { //Se a função tem dois parâmentro mas apenas um arguemento é passado, o argumento dado entra no primeiro parâmentro e o segundo fica com undefined
+    //   alert(`Função de teste 4: ${p1} ${p2}`)
+    // }
+    // teste4('Argumento 1')
+
+    const raio =document.getElementById('raio')
+    const paragrafo = document.getElementById('paragrafo')
+
+    function mostrarAreaPrompt(){
+      const raioValue = parseFloat(prompt("Digite o raio"))
+      const area = Math.PI * (raioValue * raioValue)
+
+       paragrafo.innerHTML = `A área do raio é: ${area}`
+
+    }
+
+    function mostrarAreaInput() {
+      const inputValue = parseFloat(raio.value)
+      const area = Math.PI * (inputValue * inputValue)
+
+      paragrafo.innerHTML = `A área do valor digitado no input é: ${area}`
+    }
+
+
+  </script>
+</body>
+</html>
