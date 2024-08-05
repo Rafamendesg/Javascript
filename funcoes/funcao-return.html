@@ -3,9 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Funções com retorno</title>
+  <title>Funções com retorno - Desafios</title>
 </head>
 <body>
+
+  <script>
+    //Desafio - 01
+
+    function somar(n1, n2) {
+      return n1 + n2
+    }
+    console.log(somar(6,4))
+
+
+    //Desafio - 02
+
+
+    function calcular(n1,n2, simbolo) {
+      switch (simbolo){
+        case '+':
+          return n1+  n2
+        case '-':
+          return n1 - n2
+        case '*':
+          return n1 * n2
+        case '/':
+          return null
+      }
+    }
+
+    console.log(calcular(6,8, '+'))
+    console.log(calcular(4,8, '-'))
+    console.log(calcular(2,6, '/'))
+
+    //desafio - 03
+
+    function par(n1) {
+      return n1 % 2 === 0
+    }
+    console.log(par(6))
+    console.log(par(3))
+    
+    //desafio - 04
+
+    function bissexto(ano) {
+      return ano % 4 === 0 && (ano % 100 !== 0 || ano % 400 === 0)
+    }
+    console.log(bissexto(2024))
+    console.log(bissexto(2023))
+    
+
   
+  </script>
 </body>
 </html>
