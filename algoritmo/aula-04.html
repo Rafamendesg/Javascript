@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condicionais - p2</title>
+</head>
+<body>
+
+  <script>
+  
+  //Exemplo 01 - Média
+
+    const nota1 = Number.parseFloat(prompt('Informe a primeira nota: '))
+    const nota2 = Number.parseFloat(prompt('Informe a segunda nota: '))
+    const media = (nota1 + nota2) / 2
+
+    if(media >= 7){
+      alert('Aprovado!')
+    }else if( media >= 5  &&  media < 7){
+      alert('Recuperação')
+    }else{
+      alert('Reprovado!')
+    }
+
+  //Exemolo 02 - IMC
+
+    const altura = Number.parseFloat(prompt('Informe a sua altura: '))
+    const peso = Number.parseFloat(prompt('Informe seu peso: '))
+    const imc = peso / (altura * altura)
+
+    if(imc <17){
+      alert('Muito abaixo do peso')
+    }else if(imc >= 17 && imc <= 18.5){
+      alert('Abaixo do peso')
+    }else if(imc >= 18.5 && imc < 25){
+      alert('Peso ideal')
+    }else if(imc >= 25 &&  imc < 30){
+      alert('Sobrepeso')
+    }else if(imc >= 30 && imc < 35){
+      alert('Obesidade')
+    }else if(imc >= 35 && imc < 40){
+      alert('Obesidade Severa')
+    }else{
+      alert('Obesidade morbida')
+    }
+      
+  //Exemplo 03 - Criança esperança
+
+    const doacao = Number.parseFloat(prompt('Digite 1: para doar 10 reais. Digite 2: para doar 25 reais. Digite 3: para doar 50 reais. Digite 4: para doar valores acima de 50 reais. '))
+
+
+    switch (doacao) {
+      case 1:
+        alert('Você doou 10 reais! Muito obrigado por ajudar.')
+        break
+      case 2:
+        alert('Você doou 25 reais! Muito obrigado por ajudar.')
+        break
+      case 3:
+        alert('Você doou 50 reais! Muito obrigado por ajudar.')
+        break
+      case 4:
+        const caso4 = Number.parseFloat(prompt('Qual valor da doação?'))
+        alert(`O valor doado foi ${caso4} reais! Muito obrigado por ajudar!`)
+    }
+
+  //Exemplo 04 - Dependentes
+
+    const nome = prompt('Qual o nome do funcionario?')
+    const salario = Number(prompt('Qual o salario do funcionario? '))
+    const dependentes = Number(prompt('Qual é a quantidade de dependentes?'))
+    let novoSalario 
+
+    switch (dependentes) {
+      case 0:
+        novoSalario = salario + (salario * 5 / 100)
+        alert(`O novo salario de ${nome} será de R$ ${novoSalario.toFixed(2)}`)
+        break
+      case 1, 2, 3:
+        novoSalario = salario + (salario * 10 / 100)
+        alert(`O novo salario de ${nome} será de R$ ${novoSalarioto.Fixed(2)}`)
+        break
+      case 4, 5, 6:
+        novoSalario = salario + (salario * 15 / 100)
+        alert(`O novo salario de ${nome} será de R$ ${novoSalario.toFixed(2)}`)
+        break
+      default:
+        novoSalario = salario + (salario * 18 / 100)
+        alert(`O novo salario de ${nome} será de R$ ${novoSalario.toFixed(2)}`)
+    }
+
+
+  //Exemplo 05 - Classificação de nota
+
+    const n1 = Number.parseFloat(prompt('Informe a primeira nota: '))
+    const n2 = Number.parseFloat(prompt('Informe a segunda nota: '))
+    const mediaN = (n1 + n2) / 2
+
+    if(mediaN >= 9) {
+      alert(`Média: ${mediaN} Aproveitamento: A`)
+    }else if(mediaN >= 8 && mediaN < 8.9) {
+      alert(`Média: ${mediaN} Aproveitamento: B`)
+    }else if(mediaN >= 7 && mediaN < 7.9 ) {
+      alert(`Média: ${media} Aproveitamento: C`)
+    }else if(mediaN >= 6 && mediaN < 6.9) {
+      alert(`Média: ${media} Aproveitamento: D`)
+    }else if(mediaN >= 5 && mediaN < 5.9) {
+      alert(`Média: ${mediaN} Aproveitamento: E`)
+    }else{
+      alert(`Média: ${mediaN} Aproveitamento: F`)
+    }
+
+
+  </script>
+</body>
+</html>
