@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=initial-scale=1.0">
+  <title>Aula - 05 </title>
+</head>
+<body>
+  <script>
+
+    //Exemplo 01 - Elaborar um programa que leia um número. Calcule e informe o dobro desse número.
+
+      const num = prompt('Informe um número: ')
+      const dobro = num * 2
+      alert(`O dobro do número informado é: ${dobro}`)
+
+    //Exemplo 02 - Elaborar um programa que leia dois números. Calcule e informe a soma desses números:
+
+      const num1 = Number(prompt('Informe o primeiro número: '))
+      const num2 = Number(prompt('Informe o segundo número: '))
+      const soma = num1 + num2
+      alert(`A soma dos números informados é: ${soma}`)
+
+    //Exemplo 03 - ELaborar um programa que leia o valor de um jantar. Calcule e informe o valor da taxa do garçom (10%) e o valor total a ser pago.
+
+      const jantar = Number(prompt('Qual valor do jantar? '))
+      const taxa = jantar * 0.10
+      const valorFinal = jantar + taxa
+      alert(`Taxa garçom R$: ${taxa.toFixed(2)} Total R$: ${valorFinal.toFixed(2)}`)
+
+
+    //Exemplo 04 - Elaborar um programa que leia a duração de uma viagem em dias e horas. Calcule e informe a duração total da viagem em número de horas.
+
+      const dias = Number(prompt('Informe a quantidade de dias que durou a viagem: '))
+      const horas = Number(prompt('Informe a quantidade de horas que teve na viagem: '))
+      const horasTotal = (dias * 24) + horas
+       alert(`A viagem durou ${horasTotal} horas.`)
+
+    //Exemplo 05 - Elaborar um programa que leia um número. Calcule e informe os seus vizinhos, ou seja, o número anterior e posterior.
+
+      const n = Number(prompt('Informe um número: '))
+      // const ant = n - 1
+      // const post = n + 1
+      alert(`Número: ${n} \nVizinhos: ${n - 1} e ${n + 1}`)
+
+    //Exemplo 06 - Elaborar um programa para uma pizzaria, o qual leia o valor total de uma conta e quantos clientes vão pagá-la. Calcule e informe o valor a ser pago por cliente.
+
+        const valorTotal = Number(prompt('Qual valor total da conta? '))
+        const totalClientes = Number(prompt('Qual o número de clientes? '))
+        const valorCliente = valorTotal / totalClientes
+        alert(`O valor a ser pago por cliente é: R$ ${valorCliente.toFixed(2)}`)
+
+    //Exemplo 07 - Elaborar um programa para uma loja, o qual leia o preço de um produto e informe as opções de pagamento da loja. Calcule e informe o valor para pagamento à vista com 10% de desconto e o valor em 3x.
+
+      const produto = Number(prompt('Valor do produto? '))
+      const dinheiro = produto - ( produto * 0.10)
+      const parcelado = produto / 3
+      alert(`Preço R$: ${produto.toFixed(2)} \nÁ vista R$: ${dinheiro.toFixed(2)} \nOu 3x de R$: ${parcelado.toFixed(2)}`)
+
+    //Exemplo 08 - Elaborar um programa que leia 2 notas de um aluno em uma disciplina. Calcule e informe a média das notas.
+
+      const nota1 = Number(prompt('Informe a 1° nota: '))
+      const nota2 = Number(prompt('Informe a 2° nota: '))
+      const media = ( nota1 + nota2) / 2
+      alert(`1° Nota: ${nota1.toFixed(1)} \n2° Nota: ${nota2.toFixed(1)} \nMédia: ${media.toFixed(1)}`)
+  </script>
+</body>
+</html>
